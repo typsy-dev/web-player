@@ -30,7 +30,7 @@ namespace Typsy.Demo.WebPlayer.Controllers
 
             var referrer = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.Path}{this.Request.QueryString}";
 
-            string url = $"https://player.typsy.com/lesson/{lessonId}?aid={TYPSY_ACCOUNT_ID}&t={timestamp}&e={email}&s={TYPSY_SOURCE}&key={encryptedKey}&f={firstname}&l={lastname}&r={referrer}";
+            string url = $"https://player.typsy.com/lesson/{lessonId}?aid={TYPSY_ACCOUNT_ID}&t={timestamp}&e={email}&s={TYPSY_SOURCE}&key={encryptedKey}&f={firstname}&l={lastname}&r={referrer}&title=true&desc=true&cc=eng";
 
             PlayerViewModel viewModel = new PlayerViewModel();
             viewModel.Url = url;
