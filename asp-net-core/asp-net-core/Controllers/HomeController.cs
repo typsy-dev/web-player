@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using asp_net_core.Models;
 
-namespace asp_net_core.Controllers
+namespace Typsy.Demo.WebPlayer.Controllers
 {
     public class HomeController : Controller
     {

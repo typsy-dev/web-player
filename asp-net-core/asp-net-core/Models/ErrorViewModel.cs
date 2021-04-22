@@ -1,6 +1,6 @@
 using System;
 
-namespace asp_net_core.Models
+namespace Typsy.Demo.WebPlayer.Models
 {
     public class ErrorViewModel
     {
