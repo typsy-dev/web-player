@@ -1,0 +1,29 @@
+﻿@model Typsy.Demo.WebPlayer.ViewModels.CourseListViewModel
+
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<h1>Typsy Courses</h1>
+
+<div class="card-deck">
+    <div class="row row-cols-1 row-cols-md-4">
+        @foreach (var course in Model.Courses)
+        {
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="@course.Image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@course.Name</h5>
+                        <p class="card-text">Instructor: @course.Instructor.Name</p>
+                        <p class="card-text">Lessons: @course.Lessons.Count</p>
+                        <p class="card-text">Category: @course.Category.Name</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Created: @course.Created</small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using asp_net_core.Models;
+using Typsy.Demo.WebPlayer.Models;
 
 namespace Typsy.Demo.WebPlayer.Controllers
 {
