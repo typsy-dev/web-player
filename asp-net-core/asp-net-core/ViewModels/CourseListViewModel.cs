@@ -25,8 +25,7 @@ namespace Typsy.Demo.WebPlayer.ViewModels
             };
 
             // Refer to the BaseViewModel to see how the encryption keys are initialized
-
-            var client = new RestClient("https://api.typsy.com");
+            var client = new RestClient(TYPSY_API);
             var request = new RestRequest("/lms/course-list", Method.POST);
 
             request.AddHeader("Content-Type", "application/json");

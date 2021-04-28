@@ -9,13 +9,13 @@ namespace Typsy.Demo.WebPlayer.ViewModels
         protected const string TYPSY_ACCOUNT_ID = "INSERT THE NUMERIC ACCOUNT ID YOU WILL BE PROVIDED BY TYPSY";
         protected const string TYPSY_SOURCE = "INSERT THE SOURCE NAME YOU WILL BE PROVIDED BY TYPSY";
         protected const string TYPSY_KEY = "INSERT THE TYPSY KEY YOU WILL BE PROVIDED BY TYPSY";
+        protected const string TYPSY_API = "https://api.typsy.com";
 
         public BaseViewModel(HttpRequest httpRequest)
         {
             this.Timestamp = DateTime.UtcNow.ToString("O");
             this.EncryptedKeyTemplate = $"{TYPSY_KEY}:{this.Timestamp}";
             this.EncryptedKey = EncryptionHelper.CreateHmacSha256(this.EncryptedKeyTemplate, TYPSY_KEY);
-
             this.Referrer = $"{httpRequest.Scheme}://{httpRequest.Host}{httpRequest.Path}{httpRequest.QueryString}";
         }
 
